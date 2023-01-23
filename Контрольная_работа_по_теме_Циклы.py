@@ -4,14 +4,30 @@ from random import *
 
 print("1Напишите программу, которая по данному числу n от 1 до 9 выводит на экран n елок. Изображение одной елки имеет размер 4×9 символов, между двумя соседними елками также имеется пустой (из пробелов) столбец.")
 print("Разрешается вывести пустой столбец после последней елки. Для упрощения рисования скопируйте елку из примера в среду разработки. Елки должны простоложиться горизонтально.")
-n=randint(1,9)
-for i in range(n):
-    print("   /V\    ")
-    print("  / V \   ")
-    print(" / V V \  ")
-    print("/VV V VV\ ")
 print()
-
+print()
+try:
+    n=int(input("vali 1-9 palju tahad näha kuuske? "))
+    if n<1 or n>9:
+        print("Vale vahemik")
+except:
+    print("Vale andmetüüp")
+x=0
+for x in range(4):
+    for e in range(n):
+        if x == 0:
+            print("     /V\     ", end="")
+            
+        elif x == 1:
+            print("    / V \    ", end="")
+        
+        elif x == 2:
+            print("   / V V \   ", end="")      
+        
+        elif x == 3:
+            print("  /VV V VV\  ", end="")
+    print("")
+  
 
 
 print("2.Перемножить все не чётные значения в диапазоне от 0 до введенного пользователем числа(R)")
